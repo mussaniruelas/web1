@@ -1,0 +1,174 @@
+/* style.css */
+
+/* Definición de variables de colores */
+:root {
+    --paynes-gray: #495867;
+    --glaucous: #577399;
+    --columbia-blue: #bdd5ea;
+    --ghost-white: #f7f7ff;
+    --bittersweet: #fe5f55;
+
+    --color-fondo: var(--ghost-white);
+    --color-texto: var(--paynes-gray);
+    --color-header-fondo: var(--paynes-gray);
+    --color-header-texto: var(--ghost-white);
+    --color-nav-enlace: var(--ghost-white);
+    --color-nav-enlace-hover: var(--bittersweet);
+    --color-section-fondo: var(--columbia-blue);
+    --color-proyecto-fondo: var(--ghost-white);
+    --color-borde-input: var(--glaucous);
+    --color-boton-fondo: var(--bittersweet);
+    --color-boton-texto: var(--ghost-white);
+    --color-boton-hover: var(--paynes-gray);
+    --color-footer-fondo: var(--paynes-gray);
+    --color-footer-texto: var(--ghost-white);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+header {
+    background-color: var(--color-header-fondo);
+    color: var(--color-header-texto);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--color-nav-enlace);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: var(--color-nav-enlace-hover);
+}
+
+#searchContainer {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#buscadorProyecto {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-borde-input);
+}
+
+#searchButton {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid var(--color-borde-input);
+    background-color: var(--color-boton-fondo);
+    color: var (--color-boton-texto);
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: var(--color-boton-hover);
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: var(--color-section-fondo);
+    border-radius: 5px;
+}
+
+section h2 {
+    border-bottom: 2px solid var(--color-texto);
+    padding-bottom: 10px;
+}
+
+#listaProyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.proyecto {
+    background-color: var(--color-proyecto-fondo);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.proyecto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.proyecto h3 {
+    margin: 10px 0 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.proyecto p {
+    margin: 0;
+    white-space: pre-line;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid var(--color-borde-input);
+    border-radius: 5px;
+}
+
+form button {
+    background-color: var(--color-boton-fondo);
+    color: var(--color-boton-texto);
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+footer {
+    background-color: var(--color-footer-fondo);
+    color: var(--color-footer-texto);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
